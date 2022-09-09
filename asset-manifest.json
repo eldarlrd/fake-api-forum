@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fake-api-forum/static/css/main.5f83e0a8.css",
+    "main.js": "/fake-api-forum/static/js/main.d0e708fe.js",
+    "index.html": "/fake-api-forum/index.html",
+    "main.5f83e0a8.css.map": "/fake-api-forum/static/css/main.5f83e0a8.css.map",
+    "main.d0e708fe.js.map": "/fake-api-forum/static/js/main.d0e708fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f83e0a8.css",
+    "static/js/main.d0e708fe.js"
+  ]
+}
