@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/fake-api-forum/static/css/main.9ea84145.css",
+    "main.js": "/fake-api-forum/static/js/main.15278d6f.js",
+    "static/js/423.fc80c5e9.chunk.js": "/fake-api-forum/static/js/423.fc80c5e9.chunk.js",
+    "static/js/433.37bc52e3.chunk.js": "/fake-api-forum/static/js/433.37bc52e3.chunk.js",
+    "static/js/187.36872261.chunk.js": "/fake-api-forum/static/js/187.36872261.chunk.js",
+    "static/js/335.2f3c3484.chunk.js": "/fake-api-forum/static/js/335.2f3c3484.chunk.js",
+    "static/js/87.f73ff050.chunk.js": "/fake-api-forum/static/js/87.f73ff050.chunk.js",
+    "static/media/react.png": "/fake-api-forum/static/media/react.da363b94e54e6deee792.png",
+    "static/media/json.png": "/fake-api-forum/static/media/json.01a2f910178bbe435fa8.png",
+    "static/media/html-css-js.png": "/fake-api-forum/static/media/html-css-js.174d5a07bf4bbf6797dd.png",
+    "static/media/404.png": "/fake-api-forum/static/media/404.1786e3bb584c3ec436e2.png",
+    "static/media/hamburger.png": "/fake-api-forum/static/media/hamburger.c867af78b7b246674818.png",
+    "index.html": "/fake-api-forum/index.html",
+    "main.9ea84145.css.map": "/fake-api-forum/static/css/main.9ea84145.css.map",
+    "main.15278d6f.js.map": "/fake-api-forum/static/js/main.15278d6f.js.map",
+    "423.fc80c5e9.chunk.js.map": "/fake-api-forum/static/js/423.fc80c5e9.chunk.js.map",
+    "433.37bc52e3.chunk.js.map": "/fake-api-forum/static/js/433.37bc52e3.chunk.js.map",
+    "187.36872261.chunk.js.map": "/fake-api-forum/static/js/187.36872261.chunk.js.map",
+    "335.2f3c3484.chunk.js.map": "/fake-api-forum/static/js/335.2f3c3484.chunk.js.map",
+    "87.f73ff050.chunk.js.map": "/fake-api-forum/static/js/87.f73ff050.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9ea84145.css",
+    "static/js/main.15278d6f.js"
+  ]
+}
