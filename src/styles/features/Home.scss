@@ -1,0 +1,73 @@
+@import '@/styles/variables';
+
+main {
+  color: $fg-main;
+  padding: 0 1rem;
+  max-width: 36rem;
+
+  & h1 {
+    margin: 0;
+    padding-top: 1.25rem;
+  }
+
+  & h1, & h2 {
+    text-align: center;
+  }
+
+  & h2, & h3, & span {
+    font-weight: 600;
+  }
+
+  & h1, & h2, & h3 {
+    user-select: none;
+  }
+
+  & p {
+    font-weight: 500;
+    line-height: 1.25rem;
+  }
+
+  & a {
+    color: inherit;
+    line-height: 1;
+    position: relative;
+    word-wrap: break-word;
+    text-decoration: none;
+    border-radius: $radius;
+    -webkit-tap-highlight-color: $bg-tap;
+
+    &::before {
+      left: 0;
+      width: 100%;
+      content: '';
+      display: block;
+      height: 0.125rem;
+      bottom: -0.375rem;
+      position: absolute;
+      transform: scaleX(0);
+      border-radius: $radius;
+      background: currentColor;
+      transform-origin: bottom right;
+      transition: transform $transition;
+    }
+
+    @media (hover: hover) {
+      &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+    }
+  }
+}
+
+.ts {
+  color: $ts-blue;
+}
+
+.react {
+  color: $react-blue;
+}
+
+.scss {
+  color: $scss-pink;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Fake API Forum",
+  "short_name": "Fake API Forum",
+  "dir": "ltr",
+  "lang": "en",
+  "categories": [
+    "utilities"
+  ],
+  "display": "fullscreen",
+  "orientation": "natural",
+  "theme_color": "#22c55e",
+  "background_color": "#fafaf9",
+  "description": "An SPA Fake API Forum",
+  "start_url": "https://eldarlrd.github.io/fake-api-forum/",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,11 +1,7 @@
-import error404 from "../images/404.png";
-import About from "./ui/about";
-
-const NoPage = () => {
+export const NoPage = () => {
   return (
-    <div id="error">
+    <div id='error'>
       <h1> ERROR! </h1>
-      <img src={error404} alt="404 PAGE NOT FOUND" />
       <h2> Available pages: </h2>
       <ul>
         <li> /welcome </li>
@@ -18,9 +14,6 @@ const NoPage = () => {
         <li> /users </li>
         <li> /users/&#123;user.id&#125; </li>
       </ul>
-      <About />
     </div>
   );
 };
-
-export default NoPage;

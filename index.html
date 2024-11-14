@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='An SPA Fake API Forum'>
+    <meta name='keywords' content='forum'>
+    <meta name='author' content='Eldar Pashazade'>
+    <meta name='theme-color' content='#22c55e'>
+
+    <meta property='og:type' content='website'>
+    <meta property='og:title' content='Fake API Forum'>
+    <meta property='og:description' content='An SPA Fake API Forum'>
+    <meta property='og:url' content='https://eldarlrd.github.io/fake-api-forum'>
+    <meta property='og:image'
+      content=''>
+    <meta property='og:image:type' content='image/png'>
+    <meta property='og:image:width' content='1280'>
+    <meta property='og:image:height' content='640'>
+
+    <link as='style' rel='preload' type='text/css'
+      href='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css'
+      onload="this.onload=null;this.rel='stylesheet'">
+    <link rel='manifest' type='application/manifest+json' href='site.webmanifest'>
+    <link rel='icon' type='image/png' sizes='512x512' href='favicon.png'>
+    <title>Fake API Forum</title>
+
+    <!-- Single Page Apps for GitHub Pages MIT License
+      https://github.com/rafgraph/spa-github-pages -->
+    <script type='text/javascript'>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+  </head>
+
+  <body>
+    <div id='root'></div>
+    <script type='module' src='src/main.tsx'></script>
+  </body>
+</html>
