@@ -1,0 +1,17 @@
+@import '@/styles/variables';
+
+footer {
+  gap: .5rem;
+  display: inherit;
+  font-weight: 500;
+  min-height: 4rem;
+  user-select: none;
+  align-items: center;
+  font-size: 1.125rem;
+  padding-bottom: 2rem;
+  flex-direction: column;
+
+  svg {
+    vertical-align: middle;
+  }
+}

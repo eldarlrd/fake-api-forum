@@ -6,11 +6,12 @@
 > - **[TypeScript](https://typescriptlang.org)**
 > - **[React](https://react.dev)**
 > - **[React Router](https://reactrouter.com)**
+> - **[JSONPlaceholder](https://jsonplaceholder.typicode.com)**
 > - **[Axios](https://axios-http.com)**
 > - **[Zod](https://zod.dev)**
 > - **[SCSS](https://sass-lang.com)**
 > - **[modern-normalize](https://github.com/sindresorhus/modern-normalize)**
-> - **[Font Awesome](https://fontawesome.com)**
+> - **[Lucide](https://lucide.dev)**
 > - **[Devicon](https://devicon.dev)**
 > - **[Vite](https://vitejs.dev)**
 >

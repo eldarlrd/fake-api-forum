@@ -1,13 +1,19 @@
 @import '@/styles/variables';
 
-main {
+#home {
+  flex-grow: 1;
   color: $fg-main;
   padding: 0 1rem;
   max-width: 36rem;
+  align-content: center;
 
   & h1 {
     margin: 0;
     padding-top: 1.25rem;
+
+    & img {
+      vertical-align: middle;
+    }
   }
 
   & h1, & h2 {
@@ -26,38 +32,10 @@ main {
     font-weight: 500;
     line-height: 1.25rem;
   }
+}
 
-  & a {
-    color: inherit;
-    line-height: 1;
-    position: relative;
-    word-wrap: break-word;
-    text-decoration: none;
-    border-radius: $radius;
-    -webkit-tap-highlight-color: $bg-tap;
-
-    &::before {
-      left: 0;
-      width: 100%;
-      content: '';
-      display: block;
-      height: 0.125rem;
-      bottom: -0.375rem;
-      position: absolute;
-      transform: scaleX(0);
-      border-radius: $radius;
-      background: currentColor;
-      transform-origin: bottom right;
-      transition: transform $transition;
-    }
-
-    @media (hover: hover) {
-      &:hover::before {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-    }
-  }
+.js {
+  color: $js-yellow;
 }
 
 .ts {
@@ -66,6 +44,10 @@ main {
 
 .react {
   color: $react-blue;
+}
+
+.css {
+  color: $css-purple;
 }
 
 .scss {

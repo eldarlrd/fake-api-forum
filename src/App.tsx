@@ -6,7 +6,7 @@ import '@fontsource-variable/raleway/index.css';
 import 'modern-normalize/modern-normalize.css';
 
 import { NoPage } from '@/features/NoPage.tsx';
-import { About } from '@/features/banners/About';
+import { Footer } from '@/features/banners/Footer.tsx';
 import { Navbar } from '@/features/banners/Navbar';
 
 const Home = lazy(() =>
@@ -67,7 +67,7 @@ export const App = (): ReactElement => {
         ))}
       </Routes>
 
-      {/* <About /> */}
+      <Footer />
     </>
   );
 };

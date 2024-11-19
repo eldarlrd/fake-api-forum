@@ -6,6 +6,7 @@
 }
 
 #root {
+  gap: 1rem;
   display: flex;
   min-height: 100dvh;
   align-items: center;
@@ -21,11 +22,39 @@
   background: $accent-main;
 }
 
-button {
-  outline: none;
+.external {
+  color: inherit;
+  line-height: 1;
+  position: relative;
+  word-wrap: break-word;
+  text-decoration: none;
+  border-radius: $radius;
+  -webkit-tap-highlight-color: $bg-tap;
 
-  &:hover {
-    transition: .1s;
+  &:focus-visible {
+    outline: 0.125rem solid currentcolor;
+  }
+
+  &::before {
+    left: 0;
+    width: 100%;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    bottom: -0.375rem;
+    position: absolute;
+    transform: scaleX(0);
+    border-radius: $radius;
+    background: currentcolor;
+    transform-origin: bottom right;
+    transition: transform $transition;
+  }
+
+  @media (hover: hover) {
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }
 
@@ -363,67 +392,6 @@ nav {
 
     &:active {
       color: darken($accent-complimentary, 25);
-    }
-  }
-}
-
-// Error
-#error {
-  @extend #welcome;
-
-  align-items: center;
-
-  h1 {
-    font-size: 42px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  img {
-    width: 22em;
-    height: 16em;
-  }
-
-  li {
-    list-style: none;
-    text-align: left;
-  }
-}
-
-// About
-#about {
-  text-align: center;
-  padding: 6em;
-  margin-top: 4em;
-  width: calc(100% - 12em);
-  color: $bg-main;
-  background: $fg-main;
-  flex: 1;
-
-  a {
-    color: grayscale(darken($bg-main, 20));
-
-    &:hover {
-      color: $bg-main;
-      font-size: 17px;
-    }
-
-    &:active {
-      color: $blue;
-    }
-  }
-
-  a:nth-child(1) {
-    color: $purple;
-
-    &:hover {
-      color: lighten($purple, 20);
-    }
-
-    &:active {
-      color: darken($accent-main, 20);
     }
   }
 }

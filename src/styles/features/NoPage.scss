@@ -1,0 +1,67 @@
+@import '@/styles/variables';
+
+#no-page {
+  gap: 2.5rem;
+  flex-grow: 1;
+  display: flex;
+  color: $fg-main;
+  padding: 0 1rem;
+  max-width: 36rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  & h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    padding-top: 1.25rem;
+    color: $accent-complimentary;
+  }
+
+  & h2 {
+    font-weight: 500;
+  }
+
+  & h1, & h2 {
+    user-select: none;
+    text-align: center;
+  }
+
+  & a {
+    color: inherit;
+    line-height: 1;
+    display: inherit;
+    font-weight: 600;
+    user-select: none;
+    font-size: 1.25rem;
+    position: relative;
+    margin-right: 1rem;
+    align-items: center;
+    word-wrap: break-word;
+    text-decoration: none;
+    border-radius: $radius;
+    max-width: min-content;
+    justify-content: center;
+    transition: color $transition;
+    -webkit-tap-highlight-color: $bg-tap;
+
+    & svg {
+      transition: transform $transition;
+    };
+
+    &:focus-visible {
+      outline: 0.125rem solid currentcolor;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $fg-secondary;
+      }
+
+      &:hover svg {
+        transform: translateX(-0.25rem);
+      }
+    }
+  }
+}
