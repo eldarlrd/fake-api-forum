@@ -1,5 +1,5 @@
 import { ChevronLeft } from 'lucide-react';
-import { ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import '@/styles/features/NoPage.scss';
 

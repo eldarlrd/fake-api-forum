@@ -2,34 +2,40 @@
 
 #home {
   flex-grow: 1;
-  color: $fg-main;
-  padding: 0 1rem;
   max-width: 36rem;
   align-content: center;
+  color: var(--fg-main);
+  transition: color $transition;
 
   & h1 {
     margin: 0;
-    padding-top: 1.25rem;
+    padding-top: .75rem;
 
     & img {
       vertical-align: middle;
     }
   }
 
-  & h1, & h2 {
+  & h1,
+  & h2 {
     text-align: center;
   }
 
-  & h2, & h3, & span {
+  & h2,
+  & h3,
+  & span {
     font-weight: 600;
   }
 
-  & h1, & h2, & h3 {
+  & h1,
+  & h2,
+  & h3 {
     user-select: none;
   }
 
   & p {
     font-weight: 500;
+    text-align: justify;
     line-height: 1.25rem;
   }
 }

@@ -8,8 +8,10 @@ footer {
   user-select: none;
   align-items: center;
   font-size: 1.125rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  color: var(--fg-main);
   flex-direction: column;
+  transition: color $transition;
 
   svg {
     vertical-align: middle;

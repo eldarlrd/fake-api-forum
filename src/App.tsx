@@ -1,29 +1,19 @@
-import { lazy, type ReactElement } from 'react';
+import { type ReactElement } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import '@/App.scss';
 import '@fontsource-variable/raleway/index.css';
 import 'modern-normalize/modern-normalize.css';
 
+import { Home } from '@/features/Home.tsx';
 import { NoPage } from '@/features/NoPage.tsx';
 import { Footer } from '@/features/banners/Footer.tsx';
-import { Navbar } from '@/features/banners/Navbar';
-
-const Home = lazy(() =>
-  import('@/features/Home').then(module => ({ default: module.Home }))
-);
-const Posts = lazy(() =>
-  import('@/pages/Posts').then(module => ({ default: module.Posts }))
-);
-const Comments = lazy(() =>
-  import('@/pages/Comments').then(module => ({ default: module.Comments }))
-);
-const Photos = lazy(() =>
-  import('@/pages/Photos').then(module => ({ default: module.Photos }))
-);
-const Users = lazy(() =>
-  import('@/pages/Users').then(module => ({ default: module.Users }))
-);
+import { Navbar } from '@/features/banners/Navbar.tsx';
+import { Comments } from '@/pages/Comments.tsx';
+import { Posts } from '@/pages/Posts.tsx';
+import { Todos } from '@/pages/Todos.tsx';
+import { Users } from '@/pages/Users.tsx';
+import { ThemeProvider } from '@/state/Theme.tsx';
 
 interface RouteProps {
   path: string;
@@ -32,7 +22,7 @@ interface RouteProps {
 
 const ROUTES: RouteProps[] = [
   {
-    path: '',
+    path: '/',
     element: <Home />
   },
   {
@@ -44,8 +34,8 @@ const ROUTES: RouteProps[] = [
     element: <Comments />
   },
   {
-    path: '/photos',
-    element: <Photos />
+    path: '/todos',
+    element: <Todos />
   },
   {
     path: '/users',
@@ -59,16 +49,19 @@ const ROUTES: RouteProps[] = [
 
 export const App = (): ReactElement => {
   return (
-    <>
-      {/* <Navbar /> */}
-      <Routes>
-        {ROUTES.map(({ path, element }) => (
-          <Route key={path} path={path} element={element} />
-        ))}
-      </Routes>
+    <ThemeProvider>
+      <>
+        <Navbar />
 
-      <Footer />
-    </>
+        <Routes>
+          {ROUTES.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
+        </Routes>
+
+        <Footer />
+      </>
+    </ThemeProvider>
   );
 };
 

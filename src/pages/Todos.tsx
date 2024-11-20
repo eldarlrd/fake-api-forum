@@ -1,5 +1,5 @@
 import { type ReactElement } from 'react';
 
-export const Posts = (): ReactElement => {
+export const Todos = (): ReactElement => {
   return <></>;
 };

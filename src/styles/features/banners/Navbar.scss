@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+nav {
+  gap: 0.5rem;
+  width: 100%;
+  display: inherit;
+  margin-top: 1rem;
+  max-width: 36rem;
+  user-select: none;
+  align-items: center;
+  box-shadow: $shadow;
+  color: var(--bg-main);
+  border-radius: $radius;
+  padding: .75rem 1.25rem;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  transition: color $transition, background-color $transition;
+
+  & div {
+    gap: 0.5rem;
+    display: inherit;
+  }
+}

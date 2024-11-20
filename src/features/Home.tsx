@@ -7,9 +7,9 @@ export const Home = (): ReactElement => (
       Welcome to the
       <div>
         <img
-          src='favicon.png'
           width='32'
           height='32'
+          src='favicon.png'
           alt='Green & Red Chat Boxes'
         />{' '}
         Fake API Forum
@@ -24,7 +24,7 @@ export const Home = (): ReactElement => (
     </p>
 
     <p>
-      It is of particular interest since it's a{' '}
+      It is of particular interest since it is a{' '}
       <span>single-page application</span> built using{' '}
       <span className='ts'>TypeScript,</span>{' '}
       <span className='react'>React,</span> and{' '}
@@ -50,7 +50,7 @@ export const Home = (): ReactElement => (
     <p>
       <span className='ts'>TypeScript</span> is a superset of{' '}
       <span className='js'>JavaScript</span> developed by Microsoft that adds
-      static typing to the language. It's transpiled and ran on the browser.
+      static typing to the language. It is transpiled and ran on the browser.
     </p>
 
     <p>
