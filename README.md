@@ -40,6 +40,15 @@ pnpm preview
 ```sh
 pnpm format
 ```
+## Test
+### Run Watch
+```sh
+pnpm test
+```
+### Coverage Report
+```sh
+pnpm cover
+```
 ## Deploy
 ```sh
 pnpm deployer

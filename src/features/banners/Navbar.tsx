@@ -1,10 +1,10 @@
 import {
-  Users,
-  Sun,
-  Moon,
-  CheckCheck,
   Presentation,
-  Images
+  BookImage,
+  ListTodo,
+  Users,
+  Moon,
+  Sun
 } from 'lucide-react';
 import { type ReactElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -29,11 +29,11 @@ const LINKS: LinkProps[] = [
   },
   {
     to: '/albums',
-    icon: <Images size={24} aria-label='Two Images' />
+    icon: <BookImage size={24} aria-label='Album' />
   },
   {
     to: '/todos',
-    icon: <CheckCheck size={24} aria-label='Two Check Signs' />
+    icon: <ListTodo size={24} aria-label='Todo List' />
   },
   {
     to: '/users',
