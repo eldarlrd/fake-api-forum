@@ -13,7 +13,7 @@ import { Comments } from '@/pages/Comments.tsx';
 import { Posts } from '@/pages/Posts.tsx';
 import { Todos } from '@/pages/Todos.tsx';
 import { Users } from '@/pages/Users.tsx';
-import { ThemeProvider } from '@/state/Theme.tsx';
+import { ThemeProvider } from '@/utils/Theme.tsx';
 
 interface RouteProps {
   path: string;

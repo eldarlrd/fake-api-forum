@@ -1,4 +1,4 @@
-@import '@/styles/variables';
+@use '@/styles/variables' as *;
 
 #home {
   flex-grow: 1;
@@ -9,7 +9,7 @@
 
   & h1 {
     margin: 0;
-    padding-top: .75rem;
+    padding-top: 0.75rem;
 
     & img {
       vertical-align: middle;

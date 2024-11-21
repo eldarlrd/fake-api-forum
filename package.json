@@ -1,6 +1,6 @@
 {
   "name": "fake-api-forum",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "private": true,
   "type": "module",
   "keywords": [
@@ -13,12 +13,12 @@
   "license": "AGPL-3.0-only",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && cp 404.html dist",
     "preview": "vite preview",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
     "lint": "eslint src --flag unstable_ts_config",
     "style": "stylelint 'src/**/*.{css,pcss,scss,sass,less,styl}'",
-    "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx}' --write",
+    "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx,scss}' --write",
     "format": "pnpm lint --fix && pnpm style --fix && pnpm pretty"
   },
   "stylelint": {
@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@fontsource-variable/raleway": "5.1.0",
+    "@tanstack/react-query": "^5.61.0",
     "axios": "^1.7.7",
     "lucide-react": "^0.460.0",
     "modern-normalize": "^3.0.1",
@@ -50,9 +51,11 @@
   },
   "devDependencies": {
     "@eslint/js": "~9.14.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.1",
+    "@vitest/coverage-v8": "^2.1.5",
     "eslint": "~9.14.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.3",
@@ -64,14 +67,17 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-vitest": "^0.5.4",
     "gh-pages": "^6.2.0",
     "globals": "^15.12.0",
+    "happy-dom": "^15.11.6",
     "jiti": "^2.4.0",
     "prettier": "^3.3.3",
     "stylelint": "^16.10.0",
     "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.15.0",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5"
   }
 }

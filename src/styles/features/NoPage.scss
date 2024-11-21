@@ -1,4 +1,4 @@
-@import '@/styles/variables';
+@use '@/styles/variables' as *;
 
 #no-page {
   gap: 2.5rem;
@@ -50,8 +50,6 @@
     & svg {
       transition: transform $transition;
     }
-
-    ;
 
     &:focus-visible {
       outline: 0.125rem solid currentcolor;

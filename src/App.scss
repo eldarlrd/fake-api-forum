@@ -1,13 +1,13 @@
-@import '@/styles/variables';
+@use '@/styles/variables' as *;
 
 :root {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+
   --bg-main: #fafaf9; // tw-stone-50
   --bg-secondary: #292524; // tw-stone-800
   --fg-main: #1c1917; // tw-stone-900
   --fg-secondary: #57534e; // tw-stone-600
-
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
 
   &.dark {
     --bg-main: #1c1917; // tw-stone-900
@@ -55,7 +55,7 @@ button {
 }
 
 .internal {
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   transition: background-color $transition;
 
   &.current {
@@ -90,15 +90,5 @@ button {
       transform: scaleX(1);
       transform-origin: bottom left;
     }
-  }
-}
-
-@keyframes spin-anim {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }

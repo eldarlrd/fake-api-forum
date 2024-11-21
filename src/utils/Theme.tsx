@@ -7,6 +7,26 @@ interface ThemeProps {
 
 const ThemeContext = createContext<ThemeProps | null>(null);
 
+const root: HTMLElement = document.documentElement;
+
+const applyTheme = (theme: string): void => {
+  root.classList.remove('light', 'dark');
+  root.classList.add(theme);
+  root.style.colorScheme = theme;
+  localStorage.setItem('theme', theme);
+};
+
+// Avoid FOLM
+const themeCheck = (): void => {
+  const prefersDarkMode = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+  const storedTheme = localStorage.getItem('theme');
+  const theme = storedTheme ?? (prefersDarkMode ? 'dark' : 'light');
+
+  applyTheme(theme);
+};
+
 const ThemeProvider = ({
   children
 }: {
@@ -23,11 +43,7 @@ const ThemeProvider = ({
   const [theme, setTheme] = useState<string>(initialTheme);
 
   useEffect(() => {
-    const html = document.documentElement;
-
-    html.classList.remove('light', 'dark');
-    html.classList.add(theme);
-    localStorage.setItem('theme', theme);
+    applyTheme(theme);
   }, [theme]);
 
   return (
@@ -36,5 +52,7 @@ const ThemeProvider = ({
     </ThemeContext.Provider>
   );
 };
+
+themeCheck();
 
 export { type ThemeProps, ThemeContext, ThemeProvider };

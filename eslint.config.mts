@@ -9,6 +9,7 @@ import pluginPromise from 'eslint-plugin-promise';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
+import vitest from 'eslint-plugin-vitest';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
@@ -23,6 +24,7 @@ export default tseslint.config({
     nodePlugin.configs['flat/recommended-module'],
     pluginPromise.configs['flat/recommended'],
     jsxA11y.flatConfigs.strict,
+    vitest.configs.recommended,
     eslintConfigPrettier
   ],
   files: ['**/*.{ts,tsx}'],
@@ -35,7 +37,7 @@ export default tseslint.config({
     globals: {
       ...globals.serviceworker,
       ...globals.browser,
-      ...globals.es2023
+      ...globals.es2024
     },
     parser: tseslint.parser,
     parserOptions: {
@@ -63,6 +65,13 @@ export default tseslint.config({
     'import/no-named-as-default': 0,
     'import/no-default-export': 2,
     'import/group-exports': 2,
+    'vitest/no-test-return-statement': 2,
+    'vitest/consistent-test-filename': 2,
+    'vitest/prefer-equality-matcher': 2,
+    'vitest/prefer-lowercase-title': 2,
+    'vitest/prefer-strict-equal': 2,
+    'vitest/consistent-test-it': 2,
+    'vitest/no-test-prefixes': 2,
     'react/sort-comp': 2,
     'react/jsx-pascal-case': 2,
     'react/prefer-es6-class': 2,

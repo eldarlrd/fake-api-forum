@@ -1,17 +1,14 @@
 import '@/styles/features/Home.scss';
 import { type ReactElement } from 'react';
 
+import logo from '#/images/logo.webp';
+
 export const Home = (): ReactElement => (
   <main id='home'>
     <h1>
       Welcome to the
       <div>
-        <img
-          width='32'
-          height='32'
-          src='favicon.png'
-          alt='Green & Red Chat Boxes'
-        />{' '}
+        <img width='32' height='32' src={logo} alt='Green & Red Chat Boxes' />{' '}
         Fake API Forum
       </div>
     </h1>

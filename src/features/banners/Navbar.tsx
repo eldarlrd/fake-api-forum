@@ -8,8 +8,9 @@ import {
 } from 'lucide-react';
 import { type ReactElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import '@/styles/features/banners/Navbar.scss';
 
+import '@/styles/features/banners/Navbar.scss';
+import logo from '#/images/logo.webp';
 import { useTheme } from '@/hooks/useTheme.ts';
 
 interface LinkProps {
@@ -20,14 +21,7 @@ interface LinkProps {
 const LINKS: LinkProps[] = [
   {
     to: '/',
-    icon: (
-      <img
-        width='24'
-        height='24'
-        src='favicon.png'
-        alt='Green & Red Chat Boxes'
-      />
-    )
+    icon: <img width='24' height='24' src={logo} alt='Green & Red Chat Boxes' />
   },
   {
     to: '/posts',
