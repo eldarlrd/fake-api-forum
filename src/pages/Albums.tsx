@@ -4,9 +4,9 @@ import { type ReactElement } from 'react';
 // import { SCHEMAS } from '@/config/schemas.ts';
 // import { useApi } from '@/hooks/useApi.ts';
 
-export const Todos = (): ReactElement => {
+export const Albums = (): ReactElement => {
   // const { pathname } = useLocation();
-  // const { data = [] } = useApi(pathname, SCHEMAS.todos);
+  // const { data = [] } = useApi(pathname, SCHEMAS.albums);
 
   return <div />;
 };

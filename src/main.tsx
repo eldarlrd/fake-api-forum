@@ -18,6 +18,7 @@
  * along with Fake API Forum. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -26,11 +27,15 @@ import { App } from '@/App.tsx';
 
 const root = document.getElementById('root');
 
+const queryClient = new QueryClient();
+
 if (root)
   createRoot(root).render(
     <StrictMode>
-      <BrowserRouter basename='/fake-api-forum'>
-        <App />
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter basename='/fake-api-forum'>
+          <App />
+        </BrowserRouter>
+      </QueryClientProvider>
     </StrictMode>
   );

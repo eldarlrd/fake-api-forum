@@ -1,10 +1,10 @@
 import {
-  CheckCheck,
-  MessageSquareReply,
-  Presentation,
   Users,
   Sun,
-  Moon
+  Moon,
+  CheckCheck,
+  Presentation,
+  Images
 } from 'lucide-react';
 import { type ReactElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -28,8 +28,8 @@ const LINKS: LinkProps[] = [
     icon: <Presentation size={24} aria-label='Presentation Slide' />
   },
   {
-    to: '/comments',
-    icon: <MessageSquareReply size={24} aria-label='Angled Left Arrows' />
+    to: '/albums',
+    icon: <Images size={24} aria-label='Two Images' />
   },
   {
     to: '/todos',

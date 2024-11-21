@@ -1,4 +1,40 @@
-import { object, string, number, boolean, type z, type ZodSchema } from 'zod';
+import { object, string, number, boolean, type z, type ZodType } from 'zod';
+
+const posts = object({
+  userId: number(),
+  id: number(),
+  title: string(),
+  body: string()
+}).array();
+
+const comments = object({
+  postId: number(),
+  id: number(),
+  name: string(),
+  email: string(),
+  body: string()
+}).array();
+
+const albums = object({
+  userId: number(),
+  id: number(),
+  title: string()
+}).array();
+
+const photos = object({
+  albumId: number(),
+  id: number(),
+  title: string(),
+  url: string(),
+  thumbnailUrl: string()
+}).array();
+
+const todos = object({
+  userId: number(),
+  id: number(),
+  title: string(),
+  completed: boolean()
+}).array();
 
 const geo = object({
   lat: string(),
@@ -30,58 +66,22 @@ const users = object({
   company
 }).array();
 
-const photos = object({
-  albumId: number(),
-  id: number(),
-  title: string(),
-  url: string(),
-  thumbnailUrl: string()
-}).array();
-
-const albums = object({
-  userId: number(),
-  id: number(),
-  title: string()
-}).array();
-
-const todos = object({
-  userId: number(),
-  id: number(),
-  title: string(),
-  completed: boolean()
-}).array();
-
-const posts = object({
-  userId: number(),
-  id: number(),
-  title: string(),
-  body: string()
-}).array();
-
-const comments = object({
-  postId: number(),
-  id: number(),
-  name: string(),
-  email: string(),
-  body: string()
-}).array();
-
 interface SchemaProps {
-  users: z.infer<typeof users>;
-  photos: z.infer<typeof photos>;
-  albums: z.infer<typeof albums>;
-  todos: z.infer<typeof todos>;
   posts: z.infer<typeof posts>;
   comments: z.infer<typeof comments>;
+  albums: z.infer<typeof albums>;
+  photos: z.infer<typeof photos>;
+  todos: z.infer<typeof todos>;
+  users: z.infer<typeof users>;
 }
 
-const SCHEMAS: Record<string, ZodSchema> = {
-  users,
-  photos,
-  albums,
-  todos,
+const SCHEMAS: { [K in keyof SchemaProps]: ZodType<SchemaProps[K]> } = {
   posts,
-  comments
+  comments,
+  albums,
+  photos,
+  todos,
+  users
 };
 
 export { type SchemaProps, SCHEMAS };
