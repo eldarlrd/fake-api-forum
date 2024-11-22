@@ -16,15 +16,16 @@ export const useApi = <T>(
   return useQuery<T>({
     queryKey: [endpoint],
     queryFn: async () => {
-      const data = await fetchData<T>(endpoint);
-
       try {
+        const data = await fetchData<T>(endpoint);
+
         return schema.parse(data);
       } catch (error: unknown) {
         if (error instanceof ZodError) {
           console.error(error.errors);
           throw new ZodError(error.errors);
         }
+        console.error(error);
         throw error;
       }
     },

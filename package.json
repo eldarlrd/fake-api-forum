@@ -1,6 +1,6 @@
 {
   "name": "fake-api-forum",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "private": true,
   "type": "module",
   "keywords": [
@@ -18,7 +18,7 @@
     "test": "vitest",
     "cover": "vitest run --coverage",
     "deployer": "pnpm build && gh-pages -b prod -m 'build(prod): deployment' -d dist",
-    "lint": "eslint src --flag unstable_ts_config",
+    "lint": "eslint src __tests__ --flag unstable_ts_config",
     "style": "stylelint 'src/**/*.{css,pcss,scss,sass,less,styl}'",
     "pretty": "prettier '{src,__{tests,mocks,snapshots}__}/**/*.{ts,tsx,scss}' --write",
     "format": "pnpm lint --fix && pnpm style --fix && pnpm pretty"
@@ -54,6 +54,7 @@
   "devDependencies": {
     "@eslint/js": "~9.14.0",
     "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react-hooks": "^8.0.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.7.1",
@@ -63,7 +64,7 @@
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-n": "^17.13.2",
+    "eslint-plugin-n": "^17.14.0",
     "eslint-plugin-no-relative-import-paths": "^1.5.5",
     "eslint-plugin-promise": "^7.1.0",
     "eslint-plugin-react": "^7.37.2",
