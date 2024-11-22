@@ -13,7 +13,7 @@ import { Albums } from '@/pages/Albums.tsx';
 import { Posts } from '@/pages/Posts.tsx';
 import { Todos } from '@/pages/Todos.tsx';
 import { Users } from '@/pages/Users.tsx';
-import { ThemeProvider } from '@/utils/Theme.tsx';
+import { ThemeProvider } from '@/utils/theme.ts';
 
 interface RouteProps {
   path: string;

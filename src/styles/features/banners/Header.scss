@@ -1,0 +1,14 @@
+header {
+  & h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.5rem;
+    user-select: none;
+    text-align: center;
+    padding: 0.75rem 0;
+
+    & svg {
+      vertical-align: bottom;
+    }
+  }
+}

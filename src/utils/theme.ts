@@ -1,4 +1,10 @@
-import { createContext, type ReactElement, useEffect, useState } from 'react';
+import {
+  type ReactElement,
+  createContext,
+  createElement,
+  useEffect,
+  useState
+} from 'react';
 
 interface ThemeProps {
   theme: string;
@@ -46,10 +52,10 @@ const ThemeProvider = ({
     applyTheme(theme);
   }, [theme]);
 
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
+  return createElement(
+    ThemeContext.Provider,
+    { value: { theme, setTheme } },
+    children
   );
 };
 
