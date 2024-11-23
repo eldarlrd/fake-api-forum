@@ -1,2 +1,32 @@
+@use '@/styles/variables' as *;
+
 #users {
+  width: 100%;
+
+  & .user-card {
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: $shadow;
+    border-radius: $radius;
+
+    & svg {
+      vertical-align: bottom;
+    }
+
+    & h2 {
+      margin-top: 0;
+      font-weight: 500;
+      font-size: 1.25rem;
+
+      & span {
+        font-weight: 300;
+        font-style: italic;
+      }
+    }
+
+    & p {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
 }

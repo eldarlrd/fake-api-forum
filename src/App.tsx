@@ -47,23 +47,21 @@ const ROUTES: RouteProps[] = [
   }
 ];
 
-export const App = (): ReactElement => {
-  return (
-    <ThemeProvider>
-      <>
-        <Navbar />
+export const App = (): ReactElement => (
+  <ThemeProvider>
+    <>
+      <Navbar />
 
-        <Routes>
-          {ROUTES.map(({ path, element }) => (
-            <Route key={path} path={path} element={element} />
-          ))}
-        </Routes>
+      <Routes>
+        {ROUTES.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
+      </Routes>
 
-        <Footer />
-      </>
-    </ThemeProvider>
-  );
-};
+      <Footer />
+    </>
+  </ThemeProvider>
+);
 
 // Easter Egg
 console.log('Onboarding by K. M.');

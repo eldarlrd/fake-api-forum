@@ -1,5 +1,7 @@
+import { CircleUserRound, Globe, Mail, Phone } from 'lucide-react';
 import { type ReactElement } from 'react';
 import { useLocation } from 'react-router-dom';
+import '@/styles/pages/Users.scss';
 
 import { Loader } from '@/components/Loader.tsx';
 import { type SchemaProps, SCHEMAS } from '@/config/schemas.ts';
@@ -12,22 +14,25 @@ const UserCard = ({
   user: SchemaProps['users'][number];
 }): ReactElement => (
   <figure className='user-card'>
-    <h3>{user.name}</h3>
+    <h2>
+      <CircleUserRound size={22} aria-label='User' /> {user.name}{' '}
+      <span>aka</span> {user.username}
+    </h2>
+
     <p>
-      <strong>Username:</strong> {user.username}
+      <Mail size={20} aria-label='Mail' /> {user.email}
     </p>
+
     <p>
-      <strong>Email:</strong> {user.email}
+      <Phone size={20} aria-label='Phone' /> {user.phone}
     </p>
+
     <p>
-      <strong>Phone:</strong> {user.phone}
-    </p>
-    <p>
-      <strong>Website:</strong> {user.website}
+      <Globe size={20} aria-label='Globe' /> {user.website}
     </p>
 
     <div>
-      <h4>Address:</h4>
+      <h3>Address:</h3>
       <p>
         <strong>Street:</strong> {user.address.street}
       </p>
@@ -46,7 +51,7 @@ const UserCard = ({
     </div>
 
     <div>
-      <h4>Company:</h4>
+      <h3>Company:</h3>
       <p>
         <strong>Name:</strong> {user.company.name}
       </p>
