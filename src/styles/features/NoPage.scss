@@ -29,36 +29,10 @@
   }
 
   & a {
-    color: inherit;
-    line-height: 1;
-    display: inherit;
-    font-weight: 600;
-    user-select: none;
     font-size: 1.25rem;
-    position: relative;
     margin-right: 1rem;
-    align-items: center;
-    word-wrap: break-word;
-    text-decoration: none;
-    border-radius: $radius;
-    max-width: min-content;
-    justify-content: center;
-    transition: color $transition;
-    -webkit-tap-highlight-color: rgba(var(--bg-main), 0.5);
-
-    & svg {
-      transition: transform $transition;
-    }
-
-    &:focus-visible {
-      outline: 0.125rem solid currentcolor;
-    }
 
     @media (hover: hover) {
-      &:hover {
-        color: var(--fg-secondary);
-      }
-
       &:hover svg {
         transform: translateX(-0.25rem);
       }

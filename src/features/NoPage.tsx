@@ -10,7 +10,7 @@ export const NoPage = (): ReactElement => (
       <h2>PAGE NOT FOUND</h2>
     </header>
 
-    <Link to='/'>
+    <Link to='/' className='nested'>
       <ChevronLeft size={28} aria-label='Chevron Left' /> Back
     </Link>
   </main>

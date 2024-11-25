@@ -1,4 +1,19 @@
-header {
+#page-header {
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & a {
+    font-size: 1.125rem;
+
+    @media (hover: hover) {
+      &:hover svg {
+        transform: translateX(-0.25rem);
+      }
+    }
+  }
+
   & h1 {
     margin: 0;
     font-weight: 600;
@@ -8,7 +23,7 @@ header {
     padding: 0.75rem 0;
 
     & svg {
-      vertical-align: bottom;
+      vertical-align: sub;
     }
   }
 }

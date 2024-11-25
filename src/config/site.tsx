@@ -1,4 +1,4 @@
-import { Presentation, BookImage, ListTodo, Users } from 'lucide-react';
+import { Presentation, BookImage, ListTodo, Users, Image } from 'lucide-react';
 import { type ReactElement } from 'react';
 
 import logo from '#/images/logo.webp';
@@ -8,7 +8,14 @@ interface LinkProps {
   icon: ReactElement;
 }
 
-export const LINKS: LinkProps[] = [
+const NESTED_LINKS: LinkProps[] = [
+  {
+    to: 'Photos',
+    icon: <Image size={24} aria-label='Image' />
+  }
+];
+
+const NAV_LINKS: LinkProps[] = [
   {
     to: '/',
     icon: <img width='24' height='24' src={logo} alt='Green & Red Chat Boxes' />
@@ -30,3 +37,5 @@ export const LINKS: LinkProps[] = [
     icon: <Users size={24} aria-label='Two Users' />
   }
 ];
+
+export { NESTED_LINKS, NAV_LINKS };

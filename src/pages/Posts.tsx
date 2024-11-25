@@ -18,5 +18,5 @@ export const Posts = (): ReactElement => {
     <main id='posts'>
       <Header pathname={pathname} />
     </main>
-  )
+  );
 };

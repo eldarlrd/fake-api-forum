@@ -1,0 +1,21 @@
+@use '@/styles/variables' as *;
+
+#photos {
+  width: 100%;
+
+  & section {
+    gap: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  & .photo-card {
+    overflow: clip;
+    margin: 1rem 0;
+    width: 9.375rem;
+    height: 9.375rem;
+    box-shadow: $shadow;
+    border-radius: $radius;
+  }
+}

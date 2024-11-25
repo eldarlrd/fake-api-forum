@@ -3,7 +3,7 @@ import { useEffect, useState, type ReactElement } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import '@/styles/features/banners/Navbar.scss';
-import { LINKS } from '@/config/site.tsx';
+import { NAV_LINKS } from '@/config/site.tsx';
 import { useTheme } from '@/hooks/useTheme.ts';
 
 export const Navbar = (): ReactElement => {
@@ -46,7 +46,7 @@ export const Navbar = (): ReactElement => {
     <section id='navbar'>
       <nav className={isHidden ? 'hidden' : ''}>
         <div>
-          {LINKS.map(link => (
+          {NAV_LINKS.map(link => (
             <Link
               key={link.to}
               to={link.to}

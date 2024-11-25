@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+
+#albums {
+  width: 100%;
+
+  & .album-card {
+    gap: 1.25rem;
+    display: flex;
+    padding: 1rem;
+    margin: 1rem 0;
+    align-items: center;
+    box-shadow: $shadow;
+    flex-direction: column;
+    border-radius: $radius;
+
+    & svg {
+      flex-shrink: 0;
+    }
+
+    & h2 {
+      margin: 0;
+      gap: 0.375rem;
+      min-width: 100%;
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      display: inline-flex;
+    }
+
+    & button {
+      position: relative;
+    }
+
+    & a {
+      font-size: 1.125rem;
+
+      @media (hover: hover) {
+        &:hover svg {
+          transform: translateX(0.25rem);
+        }
+      }
+    }
+  }
+}

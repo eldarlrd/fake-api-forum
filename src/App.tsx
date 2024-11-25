@@ -10,6 +10,7 @@ import { NoPage } from '@/features/NoPage.tsx';
 import { Footer } from '@/features/banners/Footer.tsx';
 import { Navbar } from '@/features/banners/Navbar.tsx';
 import { Albums } from '@/pages/Albums.tsx';
+import { Photos } from '@/pages/Photos.tsx';
 import { Posts } from '@/pages/Posts.tsx';
 import { Todos } from '@/pages/Todos.tsx';
 import { Users } from '@/pages/Users.tsx';
@@ -32,6 +33,10 @@ const ROUTES: RouteProps[] = [
   {
     path: '/albums',
     element: <Albums />
+  },
+  {
+    path: '/albums/:id/photos',
+    element: <Photos />
   },
   {
     path: '/todos',
