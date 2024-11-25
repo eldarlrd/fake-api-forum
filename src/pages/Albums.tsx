@@ -1,12 +1,22 @@
 import { type ReactElement } from 'react';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-// import { SCHEMAS } from '@/config/schemas.ts';
-// import { useApi } from '@/hooks/useApi.ts';
+import { Loader } from '@/components/Loader.tsx';
+import { SCHEMAS } from '@/config/schemas.ts';
+import { Header } from '@/features/banners/Header.tsx';
+import { useApi } from '@/hooks/useApi.ts';
 
 export const Albums = (): ReactElement => {
-  // const { pathname } = useLocation();
-  // const { data = [] } = useApi(pathname, SCHEMAS.albums);
+  const { pathname } = useLocation();
+  const { data = [], isLoading } = useApi(pathname, SCHEMAS.albums);
 
-  return <div />;
+  if (isLoading) return <Loader />;
+
+  console.log(data);
+
+  return (
+    <main id='albums'>
+      <Header pathname={pathname} />
+    </main>
+  )
 };

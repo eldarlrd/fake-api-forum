@@ -1,4 +1,12 @@
-import { CircleUserRound, Globe, Mail, Phone } from 'lucide-react';
+import {
+  Building2,
+  CircleUserRound,
+  Globe,
+  Mail,
+  MapPinned,
+  PackageOpen,
+  Phone
+} from 'lucide-react';
 import { type ReactElement } from 'react';
 import { useLocation } from 'react-router-dom';
 import '@/styles/pages/Users.scss';
@@ -31,37 +39,20 @@ const UserCard = ({
       <Globe size={20} aria-label='Globe' /> {user.website}
     </p>
 
-    <div>
-      <h3>Address:</h3>
-      <p>
-        <strong>Street:</strong> {user.address.street}
-      </p>
-      <p>
-        <strong>Suite:</strong> {user.address.suite}
-      </p>
-      <p>
-        <strong>City:</strong> {user.address.city}
-      </p>
-      <p>
-        <strong>Zipcode:</strong> {user.address.zipcode}
-      </p>
-      <p>
-        <strong>Geo:</strong> {user.address.geo.lat}, {user.address.geo.lng}
-      </p>
-    </div>
+    <p>
+      <MapPinned size={20} aria-label='Map Marker' /> {user.address.city},{' '}
+      {user.address.street}, {user.address.suite}
+    </p>
 
-    <div>
-      <h3>Company:</h3>
-      <p>
-        <strong>Name:</strong> {user.company.name}
-      </p>
-      <p>
-        <strong>Catchphrase:</strong> {user.company.catchPhrase}
-      </p>
-      <p>
-        <strong>BS:</strong> {user.company.bs}
-      </p>
-    </div>
+    <p>
+      <PackageOpen size={20} aria-label='Opened Package' />{' '}
+      {user.address.zipcode}
+    </p>
+
+    <p>
+      <Building2 size={20} aria-label='Office Building' /> {user.company.name} —{' '}
+      {user.company.bs}
+    </p>
   </figure>
 );
 
