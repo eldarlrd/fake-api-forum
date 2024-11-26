@@ -1,13 +1,10 @@
-const pathToTitle = (path: string): string => {
-  const pathnameWOSlash = path.replace('/', '');
+const capitalizeFirstLetter = (text: string): string =>
+  text.charAt(0).toUpperCase() + text.slice(1);
 
-  return pathnameWOSlash.charAt(0).toUpperCase() + pathnameWOSlash.slice(1);
-};
+const pathToTitle = (path: string): string =>
+  capitalizeFirstLetter(path.replace('/', ''));
 
-const getNestedPath = (path: string): string => {
-  const pathnameNested = path.split('/').pop() ?? path;
+const getNestedPath = (path: string): string =>
+  capitalizeFirstLetter(path.split('/').pop() ?? path);
 
-  return pathnameNested.charAt(0).toUpperCase() + pathnameNested.slice(1);
-};
-
-export { pathToTitle, getNestedPath };
+export { capitalizeFirstLetter, pathToTitle, getNestedPath };

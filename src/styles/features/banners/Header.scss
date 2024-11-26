@@ -5,6 +5,7 @@
   justify-content: center;
 
   & a {
+    margin-left: -1rem;
     font-size: 1.125rem;
 
     @media (hover: hover) {

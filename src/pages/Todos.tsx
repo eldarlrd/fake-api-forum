@@ -1,4 +1,4 @@
-import { ClipboardList } from 'lucide-react';
+import { CircleCheck, ClipboardList } from 'lucide-react';
 import { type ReactElement } from 'react';
 import { useLocation } from 'react-router-dom';
 import '@/styles/pages/Todos.scss';
@@ -7,6 +7,7 @@ import { Loader } from '@/components/Loader.tsx';
 import { type SchemaProps, SCHEMAS } from '@/config/schemas.ts';
 import { Header } from '@/features/banners/Header.tsx';
 import { useApi } from '@/hooks/useApi.ts';
+import { capitalizeFirstLetter } from '@/utils/tools.ts';
 
 const TodoCard = ({
   todo
@@ -15,8 +16,10 @@ const TodoCard = ({
 }): ReactElement => (
   <figure className={`todo-card ${todo.completed ? 'completed' : ''}`}>
     <h2>
-      <ClipboardList size={22} aria-label='Todo' />
-      {todo.title}
+      {todo.completed ?
+        <CircleCheck size={22} aria-label='Big Check Mark' />
+      : <ClipboardList size={22} aria-label='Todo' />}
+      {capitalizeFirstLetter(todo.title)}
     </h2>
   </figure>
 );

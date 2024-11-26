@@ -15,6 +15,7 @@ import { Loader } from '@/components/Loader.tsx';
 import { type SchemaProps, SCHEMAS } from '@/config/schemas.ts';
 import { Header } from '@/features/banners/Header.tsx';
 import { useApi } from '@/hooks/useApi.ts';
+import { capitalizeFirstLetter } from '@/utils/tools.ts';
 
 const UserCard = ({
   user
@@ -24,11 +25,11 @@ const UserCard = ({
   <figure className='user-card'>
     <h2>
       <CircleUserRound size={22} aria-label='User' /> {user.name}{' '}
-      <span>aka</span> {user.username}
+      <span>aka</span> {user.username.toLowerCase()}
     </h2>
 
     <p>
-      <Mail size={20} aria-label='Mail' /> {user.email}
+      <Mail size={20} aria-label='Mail' /> {user.email.toLowerCase()}
     </p>
 
     <p>
@@ -51,7 +52,7 @@ const UserCard = ({
 
     <p>
       <Building2 size={20} aria-label='Office Building' /> {user.company.name} —{' '}
-      {user.company.bs}
+      {capitalizeFirstLetter(user.company.bs)}
     </p>
   </figure>
 );

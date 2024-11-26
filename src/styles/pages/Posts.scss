@@ -1,5 +1,72 @@
 @use '@/styles/variables' as *;
 
 #posts {
-  color: currentcolor;
+  width: 100%;
+
+  & .post-card {
+    display: flex;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: $shadow;
+    flex-direction: column;
+    border-radius: $radius;
+
+    & section {
+      overflow: clip;
+      transition: height $transition-double;
+    }
+
+    & svg {
+      flex-shrink: 0;
+      vertical-align: sub;
+    }
+
+    & h2 {
+      margin: 0;
+      gap: 0.375rem;
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      display: inline-flex;
+    }
+
+    & button {
+      gap: 0.25rem;
+
+      & .chevron {
+        transition: transform $transition;
+
+        &.down {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    & ul {
+      padding: 0.125rem;
+      margin: 0.125rem 0;
+    }
+
+    & li {
+      list-style: none;
+      margin-top: 0.75rem;
+      box-shadow: $shadow;
+      border-radius: $radius;
+      padding: 0.75rem 1.625rem;
+
+      & h3 {
+        margin: 0;
+        gap: 0.5rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        display: inline-flex;
+      }
+
+      & p {
+        font-size: 0.875rem;
+        margin: 0.5rem 0;
+      }
+    }
+  }
 }

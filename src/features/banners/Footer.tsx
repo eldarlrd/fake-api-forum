@@ -13,7 +13,10 @@ export const Footer = (): ReactElement => (
       rel='external noreferrer author'
       href='https://github.com/eldarlrd/fake-api-forum'>
       {/* eslint-disable-next-line @typescript-eslint/no-deprecated */}
-      <Github size={18} aria-label='GitHub Octocat' /> eldarlrd
+      <Github
+        size={18}
+        aria-label='GitHub Octocat'
+      /> eldarlrd
     </a>
   </footer>
 );

@@ -1,4 +1,4 @@
-import { Presentation, BookImage, ListTodo, Users, Image } from 'lucide-react';
+import { Presentation, BookImage, ListTodo, Users, Images } from 'lucide-react';
 import { type ReactElement } from 'react';
 
 import logo from '#/images/logo.webp';
@@ -11,7 +11,7 @@ interface LinkProps {
 const NESTED_LINKS: LinkProps[] = [
   {
     to: 'Photos',
-    icon: <Image size={24} aria-label='Image' />
+    icon: <Images size={24} aria-label='Two Images' />
   }
 ];
 

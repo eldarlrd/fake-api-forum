@@ -7,6 +7,7 @@ import { Loader } from '@/components/Loader.tsx';
 import { type SchemaProps, SCHEMAS } from '@/config/schemas.ts';
 import { Header } from '@/features/banners/Header.tsx';
 import { useApi } from '@/hooks/useApi.ts';
+import { capitalizeFirstLetter } from '@/utils/tools.ts';
 
 const AlbumCard = ({
   album
@@ -16,7 +17,7 @@ const AlbumCard = ({
   <figure className='album-card'>
     <h2>
       <Images size={22} aria-label='Two Images' />
-      {album.title}
+      {capitalizeFirstLetter(album.title)}
     </h2>
 
     <Link to={`/albums/${album.id.toString()}/photos`} className='nested'>
@@ -34,9 +35,11 @@ export const Albums = (): ReactElement => {
   return (
     <main id='albums'>
       <Header pathname={pathname} />
-      {data.map(album => (
-        <AlbumCard key={album.id} album={album} />
-      ))}
+      <section>
+        {data.map(album => (
+          <AlbumCard key={album.id} album={album} />
+        ))}
+      </section>
     </main>
   );
 };
